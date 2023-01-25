@@ -141,7 +141,6 @@ int main () {
 	
 				if (bayar>=total){
 					cout << "Kembalian Anda = Rp. " << bayar-total << ",-" << endl;
-					cout << "Terima Kasih Telah Datang dan Belanja" << endl;
 					cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
 		
 				}
@@ -162,6 +161,18 @@ int main () {
 			case 5 : {
 				if (total==0){
 					cout << "Silahkan Melakukan Pembayaran Terlebih Dahulu" << endl;
+					cout << endl;
+					cout << "Kembali Ke Menu Utama ?? ( Y/T ) : ";
+					cin >> ulang;
+					cout << "##################################" << endl;
+					cout << endl;
+					break;
+				}
+				if (bayar<total) {
+					cout << "Maaf.. Anda Belum Melunasi Tagihan... :(" << endl;
+					cout << "Uang Anda Kurang : Rp. " << total-bayar << ",-" << endl;
+					cout << "Silahkan Ulangin Pembayaran" << endl;
+					cout << "Receipt Muncul Jika Anda Telah Melunasi Tagihan..." << endl;
 					cout << endl;
 					cout << "Kembali Ke Menu Utama ?? ( Y/T ) : ";
 					cin >> ulang;
@@ -194,11 +205,20 @@ int main () {
 				cout << endl;
 				break;
 			}
-				
-		}
+			default :
+				cout << "Pilihan Menu Tidak Tersedia" << endl;	
+				cout << endl;
+				cout << "Kembali Ke Menu Utama ?? ( Y/T ) : ";
+				cin >> ulang;
+				cout << "##################################" << endl;
+				cout << endl;
+				break;	
+		} 
+		
 	} while (ulang!= 'T');
 	
-	cout << "Terima Kasih Telah Berkunjung... :)";
+	cout << "Terima Kasih Telah Datang Dan Belanja... :)" << endl;
+	cout << "Qembung Drink... Saatnya Naik Level" << endl;
 	
 	cout << endl;
 	return 0;
